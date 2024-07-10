@@ -12,6 +12,7 @@ import java.util.UUID;
 
 @Entity
 @Getter
+@Table(name = "trips")
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,7 +26,7 @@ public class Trip {
     @Column(name = "starts_at", nullable = false)
     private LocalDateTime startsAt;
 
-    @Column(name = "ends", nullable = false)
+    @Column(name = "ends_at", nullable = false)
     private LocalDateTime endsAt;
 
     @Column(name = "is_confirmed", nullable = false)
