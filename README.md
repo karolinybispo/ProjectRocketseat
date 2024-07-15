@@ -1,3 +1,3 @@
 # ProjectRocketseat
 
-esse projeto back-end utilizando spring boot e java
+This is a back-end project using Spring boot and Java.
