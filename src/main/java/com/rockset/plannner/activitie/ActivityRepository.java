@@ -1,6 +1,5 @@
-package com.rockset.plannner.activities;
+package com.rockset.plannner.activitie;
 
-import com.rockset.plannner.participant.Participant;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,2 +1,4 @@
-package com.rockset.plannner.link;public record LinkRequestPayLoud() {
+package com.rockset.plannner.link;
+
+public record LinkRequestPayLoud(String title, String url) {
 }

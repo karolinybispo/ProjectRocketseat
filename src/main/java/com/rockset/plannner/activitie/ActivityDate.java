@@ -1,4 +1,4 @@
-package com.rockset.plannner.activities;
+package com.rockset.plannner.activitie;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

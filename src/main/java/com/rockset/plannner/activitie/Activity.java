@@ -1,4 +1,4 @@
-package com.rockset.plannner.participant;
+package com.rockset.plannner.activitie;
 
 import com.rockset.plannner.trip.Trip;
 import jakarta.persistence.*;
@@ -7,38 +7,37 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
 @Entity
-@Table (name = "participants")
+@Table (name = "activities")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Participant {
-
+public class Activity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(name = "is_confirmed", nullable = false)
-    private Boolean isConfirmed;
+    @Column(name = "occurs_at", nullable = false)
+    private LocalDateTime occursAt;
 
     @Column(nullable = false)
-    private String name;
+    private String title;
 
-    @Column(nullable = false)
-    private String email;
+
 
     @ManyToOne
     @JoinColumn(name = "trip_id", nullable = false)
     private Trip trip;
 
-    public Participant( String email, Trip trip){
-        this.email = email;
+    public Activity(String title, String occursAt, Trip trip){
+        this.title = title;
+        this.occursAt = LocalDateTime.parse(occursAt, DateTimeFormatter.ISO_DATE_TIME);
         this.trip = trip;
-        this.isConfirmed = false;
-        this.name = "";
     }
 
 }

@@ -1,4 +1,4 @@
-package com.rockset.plannner.activities;
+package com.rockset.plannner.activitie;
 
 import com.rockset.plannner.trip.Trip;
 import org.springframework.beans.factory.annotation.Autowired;
